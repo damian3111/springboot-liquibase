@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet  author="damian3111"  id="1">
+        <createTable
+                tableName="accounts"
+        >
+            <column  name="user_id"  type="serial"/>
+            <column  name="username"  type="VARCHAR(50)"/>
+            <column  name="password"  type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet  author="damian3111"  id="2">
+        <insert  tableName="accounts">
+            <column  name="username"  value="username - dev"/>
+            <column  name="password"  value="password - dev"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
